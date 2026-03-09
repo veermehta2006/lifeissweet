@@ -59,11 +59,6 @@ button:hover{
 background:#555;
 }
 
-#payment{
-margin-top:60px;
-padding-bottom:60px;
-}
-
 </style>
 
 </head>
@@ -82,66 +77,57 @@ padding-bottom:60px;
 <img src="first.jpeg">
 <h3>Desert Ember Kurti</h3>
 <p>₹1199</p>
-<button onclick="showPayment()">Buy</button>
+<a href="payment.html">
+<button>Buy</button>
+</a>
 </div>
 
 <div class="product">
 <img src="second.jpeg">
 <h3>Forest Bloom Dress</h3>
 <p>₹1599</p>
-<button onclick="showPayment()">Buy</button>
+<a href="payment.html">
+<button>Buy</button>
+</a>
 </div>
 
 <div class="product">
 <img src="third.jpeg">
 <h3>Sandstone Co-ord Set</h3>
 <p>₹1899</p>
-<button onclick="showPayment()">Buy</button>
+<a href="payment.html">
+<button>Buy</button>
+</a>
 </div>
 
 <div class="product">
 <img src="fourth.jpeg">
 <h3>Golden Sun Co-ord Set</h3>
 <p>₹1699</p>
-<button onclick="showPayment()">Buy</button>
+<a href="payment.html">
+<button>Buy</button>
+</a>
 </div>
 
 <div class="product">
 <img src="fifth.jpeg">
 <h3>Sage Meadow Set</h3>
 <p>₹1499</p>
-<button onclick="showPayment()">Buy</button>
+<a href="payment.html">
+<button>Buy</button>
+</a>
 </div>
 
 <div class="product">
 <img src="sixth.jpeg">
 <h3>Royal Plum Set</h3>
 <p>₹1799</p>
-<button onclick="showPayment()">Buy</button>
+<a href="payment.html">
+<button>Buy</button>
+</a>
 </div>
 
 </div>
-
-<div id="payment" style="display:none">
-
-<h2>Scan to Pay</h2>
-
-<p>Pay using UPI (Google Pay, PhonePe, Paytm)</p>
-
-<img src="upi.png" width="250">
-
-<p>Thank you for shopping with Rù D'Avril</p>
-
-</div>
-
-<script>
-
-function showPayment(){
-document.getElementById("payment").style.display="block";
-window.location='#payment';
-}
-
-</script>
 
 </body>
 

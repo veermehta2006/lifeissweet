@@ -1,105 +1,141 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Life is Sweet Kitchen</title>
+
+<title>Rù D'Avril</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
 body{
 font-family: Arial;
 text-align:center;
-background:#fff7f0;
+background:#fafafa;
+margin:0;
+padding:0;
 }
 
-.menu-item{
+.logo{
+margin-top:30px;
+margin-bottom:20px;
+}
+
+.logo img{
+max-width:300px;
+}
+
+.subtitle{
+color:#777;
+margin-bottom:40px;
+}
+
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.product{
 border:1px solid #ddd;
-padding:15px;
-margin:10px;
-display:inline-block;
-width:200px;
+padding:20px;
+margin:20px;
+width:250px;
 background:white;
+border-radius:6px;
+}
+
+.product img{
+width:100%;
+border-radius:4px;
 }
 
 button{
-background:#ff6b35;
+background:#333;
 color:white;
 border:none;
-padding:10px;
+padding:10px 15px;
 cursor:pointer;
+margin-top:10px;
 }
 
-#cart{
-margin-top:30px;
+button:hover{
+background:#555;
+}
+
+#payment{
+margin-top:60px;
+padding-bottom:60px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<h1>Life is Sweet</h1>
-<p>Homemade food made with love</p>
-
-<h2>Menu</h2>
-
-<div class="menu-item">
-<h3>Veg Biryani</h3>
-<p>₹150</p>
-<button onclick="addItem('Veg Biryani',150)">Add</button>
+<div class="logo">
+<img src="logo.png" alt="Rù D'Avril Logo">
 </div>
 
-<div class="menu-item">
-<h3>Paneer Butter Masala</h3>
-<p>₹180</p>
-<button onclick="addItem('Paneer Butter Masala',180)">Add</button>
+<p class="subtitle">Simple elegant clothing</p>
+
+<div class="products">
+
+<div class="product">
+<h3>Desert Ember Kurti</h3>
+<p>₹1199</p>
+<button onclick="showPayment()">Buy</button>
 </div>
 
-<div class="menu-item">
-<h3>Dal Tadka</h3>
-<p>₹120</p>
-<button onclick="addItem('Dal Tadka',120)">Add</button>
+<div class="product">
+<h3>Forest Bloom Dress</h3>
+<p>₹1599</p>
+<button onclick="showPayment()">Buy</button>
 </div>
 
-<div id="cart">
-<h2>Your Order</h2>
-<ul id="cartItems"></ul>
+<div class="product">
+<h3>Golden Sun Co-ord Set</h3>
+<p>₹1699</p>
+<button onclick="showPayment()">Buy</button>
+</div>
 
-<button onclick="sendOrder()">Order on WhatsApp</button>
+<div class="product">
+<h3>Sage Meadow Set</h3>
+<p>₹1499</p>
+<button onclick="showPayment()">Buy</button>
+</div>
+
+<div class="product">
+<h3>Royal Plum Co-ord</h3>
+<p>₹1799</p>
+<button onclick="showPayment()">Buy</button>
+</div>
+
+</div>
+
+<div id="payment" style="display:none">
+
+<h2>Scan to Pay</h2>
+
+<p>Pay using UPI (Google Pay, PhonePe, Paytm)</p>
+
+<img src="upi.png" width="250">
+
+<p>Thank you for shopping with Rù D'Avril</p>
+
 </div>
 
 <script>
 
-let cart=[];
-
-function addItem(name,price){
-
-cart.push({name,price});
-
-let list=document.getElementById("cartItems");
-
-let item=document.createElement("li");
-
-item.innerText=name+" ₹"+price;
-
-list.appendChild(item);
-
-}
-
-function sendOrder(){
-
-let message="Hello, I want to order:%0A";
-
-cart.forEach(item=>{
-message+=item.name+" - ₹"+item.price+"%0A";
-});
-
-let phone="9820639444";
-
-window.open("https://wa.me/"+phone+"?text="+message);
-
+function showPayment(){
+document.getElementById("payment").style.display="block";
+window.location='#payment';
 }
 
 </script>
 
 </body>
+
 </html>

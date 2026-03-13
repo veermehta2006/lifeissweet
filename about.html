@@ -121,11 +121,24 @@ text-align:left;
 
 .split{
 display:flex;
-flex-direction:column;
-gap:30px;
+flex-direction:row;   /* forces side-by-side layout */
+align-items:flex-start;
+gap:40px;
 margin-top:20px;
 }
 
+.split .text-left{
+flex:1;
+}
+
+.split .image-right{
+flex:1;
+}
+
+.split img{
+width:100%;
+border-radius:12px;
+}
 .split img{
 width:100%;
 border-radius:12px;

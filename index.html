@@ -116,11 +116,11 @@ color:white;
 </head>
 
 <body>
-<div class="menu-button" onclick="openMenu()">☰</div>
+<div class="menu-button" onclick="toggleMenu()">☰</div>
 
 <div id="sideMenu" class="side-menu">
 
-<div class="close-btn" onclick="closeMenu()">×</div>
+
 
 <a href="earthen.html">COLLECTION</a>
 <a href="about.html">ABOUT US</a>
@@ -150,12 +150,16 @@ color:white;
 </div>
 <script>
 
-function openMenu(){
-document.getElementById("sideMenu").style.left = "0";
+function toggleMenu(){
+
+const menu = document.getElementById("sideMenu");
+
+if(menu.style.left === "0px"){
+menu.style.left = "-320px";
+}else{
+menu.style.left = "0px";
 }
 
-function closeMenu(){
-document.getElementById("sideMenu").style.left = "-320px";
 }
 
 </script>

@@ -31,21 +31,15 @@ left:-100%;
 width:80%;
 max-width:320px;
 height:100vh;
-
 background:#f5efe6;
-
 padding-top:90px;
 padding-left:30px;
 padding-right:30px;
-
 display:flex;
 flex-direction:column;
 gap:28px;
-
 box-shadow:10px 0 40px rgba(0,0,0,0.08);
-
 transition:left 0.35s ease;
-
 z-index:1500;
 }
 
@@ -56,24 +50,20 @@ text-decoration:none;
 font-family:'Cormorant Garamond', serif;
 letter-spacing:4px;
 font-size:18px;
-
 color:#6f6a64;
-
 border-bottom:1px solid #ded7cc;
-
 padding-bottom:12px;
 }
 
 /* better spacing on phones */
 
 @media (max-width:600px){
-
 .side-menu a{
 font-size:16px;
 letter-spacing:3px;
 }
-
 }
+
 body{
 margin:0;
 background:#f5efe6;
@@ -100,13 +90,62 @@ margin-top:30px;
 letter-spacing:3px;
 }
 
+/* NEW LAYOUT STYLES */
+
+.subtitle{
+font-style:italic;
+margin-top:10px;
+}
+
+.top-image{
+max-width:800px;
+width:90%;
+border-radius:12px;
+margin:40px auto 10px auto;
+display:block;
+}
+
+.caption{
+font-size:14px;
+margin-bottom:30px;
+}
+
 .text{
-max-width:700px;
+max-width:900px;
 margin:40px auto;
 padding:0 30px;
-text-align:left;
 line-height:1.8;
 font-size:16px;
+text-align:left;
+}
+
+.split{
+display:flex;
+flex-direction:column;
+gap:30px;
+margin-top:20px;
+}
+
+.split img{
+width:100%;
+border-radius:12px;
+}
+
+@media(min-width:800px){
+
+.split{
+flex-direction:row;
+align-items:flex-start;
+}
+
+.split .text-left{
+flex:1;
+}
+
+.split .image-right{
+flex:1;
+}
+
 }
 
 p{
@@ -118,6 +157,7 @@ margin-bottom:22px;
 </head>
 
 <body>
+
 <div class="menu-button" onclick="toggleMenu()">☰</div>
 
 <div id="sideMenu" class="side-menu">
@@ -133,7 +173,17 @@ margin-bottom:22px;
 <img src="logoremove.png">
 </div>
 
-<h1>ABOUT US</h1>
+<h1>ABOUT RU DAVRIL</h1>
+
+<div class="subtitle">
+Creativity passed through generations since 1993
+</div>
+
+<img src="pic1.png" class="top-image">
+
+<div class="caption">
+Nishi Jhaveri with Saanya Jhaveri
+</div>
 
 <div class="text">
 
@@ -141,13 +191,31 @@ margin-bottom:22px;
 Ru Davril is a story of creativity passed through generations. The journey began in 1993 when my mother, Chandra Mehta, started designing from home, building her work with passion, craftsmanship, and dedication. Growing up in that environment, creativity became a natural part of my life.
 </p>
 
+<div class="split">
+
+<div class="text-left">
+
 <p>
 I, Nishi Jhaveri, am a self-taught designer who continues this legacy with a contemporary perspective. At Ru Davril, we create clothing that is timeless yet modern — ranging from minimal, sophisticated silhouettes to richly embellished pieces, each designed to celebrate the spirit and individuality of the modern Indian woman.
 </p>
 
 <p>
-Every collection begins with an inspiration that evolves into a concept. We blend Indian craftsmanship with contemporary global influences to create pieces that feel effortless, elegant, and versatile. Customisation remains an important part of our process, as we believe that what you wear is a true expression of who you are.
+Every collection begins with an inspiration that evolves into a concept. We blend Indian craftsmanship with contemporary global influences to create pieces that feel effortless, elegant, and versatile.
 </p>
+
+</div>
+
+<div class="image-right">
+
+<img src="pic2.png">
+
+<div class="caption">
+Nishi Jhaveri with Chandra Mehta, who began the journey in 1993.
+</div>
+
+</div>
+
+</div>
 
 <p>
 Recently, my daughter-in-law Saanya Jhaveri joined the team, bringing fresh energy and new ideas. Together, we look forward to continuing this journey and growing the brand while staying rooted in creativity and craftsmanship.
@@ -158,6 +226,7 @@ The greatest joy in my work comes from seeing women feel confident and comfortab
 </p>
 
 </div>
+
 <script>
 
 function toggleMenu(){
@@ -173,6 +242,6 @@ menu.style.left = "0px";
 }
 
 </script>
-</body>
 
+</body>
 </html>

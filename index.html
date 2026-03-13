@@ -10,33 +10,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
+/* Hamburger button */
+
 .menu-button{
 position:fixed;
-top:25px;
-left:25px;
-font-size:26px;
+top:18px;
+left:18px;
+font-size:28px;
 cursor:pointer;
 color:#6f6a64;
 z-index:1001;
 }
 
+
+/* Side menu */
+
 .side-menu{
 position:fixed;
-top:70px;          /* pushes menu below the three lines */
+top:70px;
 left:-100%;
-width:260px;
+width:85%;
+max-width:280px;
 height:100vh;
 background:#f5efe6;
 padding:30px;
 display:flex;
 flex-direction:column;
-gap:20px;
+gap:24px;
 transition:left 0.35s ease;
 z-index:1000;
 border-radius:6px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
-
+/* Menu links */
 .side-menu a{
 text-decoration:none;
 font-family:'Cormorant Garamond', serif;
@@ -44,13 +50,33 @@ letter-spacing:3px;
 color:#6f6a64;
 font-size:18px;
 border-bottom:1px solid #d8d2c9;
-padding-bottom:12px;
+padding-bottom:14px;
+padding-top:6px;
 }
-
+/* Close button */
 .close-btn{
 font-size:30px;
 cursor:pointer;
 margin-bottom:30px;
+}
+/* Phone optimization */
+@media (max-width:600px){
+.menu-button{
+font-size:30px;
+top:16px;
+left:16px;
+}
+.side-menu{
+width:90%;
+max-width:260px;
+padding:25px;
+}
+
+.side-menu a{
+font-size:16px;
+letter-spacing:2px;
+}
+
 }
 
 body{

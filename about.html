@@ -10,7 +10,70 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
+/* hamburger button */
 
+.menu-button{
+position:fixed;
+top:18px;
+left:18px;
+font-size:28px;
+cursor:pointer;
+color:#6f6a64;
+z-index:2000;
+}
+
+/* side menu */
+
+.side-menu{
+position:fixed;
+top:0;
+left:-100%;
+width:80%;
+max-width:320px;
+height:100vh;
+
+background:#f5efe6;
+
+padding-top:90px;
+padding-left:30px;
+padding-right:30px;
+
+display:flex;
+flex-direction:column;
+gap:28px;
+
+box-shadow:10px 0 40px rgba(0,0,0,0.08);
+
+transition:left 0.35s ease;
+
+z-index:1500;
+}
+
+/* menu links */
+
+.side-menu a{
+text-decoration:none;
+font-family:'Cormorant Garamond', serif;
+letter-spacing:4px;
+font-size:18px;
+
+color:#6f6a64;
+
+border-bottom:1px solid #ded7cc;
+
+padding-bottom:12px;
+}
+
+/* better spacing on phones */
+
+@media (max-width:600px){
+
+.side-menu a{
+font-size:16px;
+letter-spacing:3px;
+}
+
+}
 body{
 margin:0;
 background:#f5efe6;
@@ -55,6 +118,16 @@ margin-bottom:22px;
 </head>
 
 <body>
+<div class="menu-button" onclick="toggleMenu()">☰</div>
+
+<div id="sideMenu" class="side-menu">
+
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT US</a>
+<a href="philosophy.html">OUR PHILOSOPHY</a>
+<a href="customization.html">CUSTOMIZATION</a>
+
+</div>
 
 <div class="logo">
 <img src="logodone.png">
@@ -85,7 +158,21 @@ The greatest joy in my work comes from seeing women feel confident and comfortab
 </p>
 
 </div>
+<script>
 
+function toggleMenu(){
+
+const menu = document.getElementById("sideMenu");
+
+if(menu.style.left === "0px"){
+menu.style.left = "-100%";
+}else{
+menu.style.left = "0px";
+}
+
+}
+
+</script>
 </body>
 
 </html>
